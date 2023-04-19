@@ -10,10 +10,15 @@ jobs:
   build:
     
     name: Build Image
-    runs-on: nginx-latest
+    runs-on: ubuntu-latest
 
    
     steps:
+    - name: Install xmllint
+      run: sudo apt-get install -y nginx
+      
+    - name: restart service
+      run: sudo systemctl restart nginx.service
 
     - name: Check out code
       uses: actions/checkout@v2
