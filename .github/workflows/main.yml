@@ -15,10 +15,10 @@ jobs:
    
     steps:
     - name: Install xmllint
-      run: sudo apt-get install -y nginx
+      run: sudo apt-get install -y apache2
       
     - name: restart service
-      run: sudo systemctl restart nginx.service
+      run: sudo systemctl restart apache2.service
 
     - name: Check out code
       uses: actions/checkout@v2
