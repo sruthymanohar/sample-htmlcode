@@ -14,7 +14,7 @@ jobs:
 
    
     steps:
-    - name: Install xmllint
+    - name: Install ubuntu
       run: sudo apt-get install -y apache2
       
     - name: restart service
